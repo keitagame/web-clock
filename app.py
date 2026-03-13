@@ -306,6 +306,8 @@ function updateCard(src, interpEpoch) {
   // タイトル/メソッド (初回のみ)
   document.getElementById(`title-${id}`).textContent = src.label || id;
   document.getElementById(`method-${id}`).textContent = src.method || '';
+  const titleEl = document.getElementById(`title-${id}`);
+  const methodEl = document.getElementById(`method-${id}`);
 if (!titleEl || !methodEl) {
     console.warn(`❌ 要素が見つからない: id=${id}`);
     return;
