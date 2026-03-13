@@ -306,7 +306,10 @@ function updateCard(src, interpEpoch) {
   // タイトル/メソッド (初回のみ)
   document.getElementById(`title-${id}`).textContent = src.label || id;
   document.getElementById(`method-${id}`).textContent = src.method || '';
-
+if (!titleEl || !methodEl) {
+    console.warn(`❌ 要素が見つからない: id=${id}`);
+    return;
+  }
   // epoch決定: 補間するか？
   let epoch = interpEpoch != null ? interpEpoch : src.epoch;
   if (epoch == null) {
