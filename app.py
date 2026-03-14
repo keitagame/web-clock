@@ -4,6 +4,7 @@
 様々な方法で現在時刻を取得して返すAPIサーバー
 """
 
+
 import time
 import datetime
 import threading
